@@ -24,7 +24,7 @@ export default function FooterContent() {
               className="w-[200px] mb-4"
             />
            <p className="text-black-950 text-sm md:text-base font-medium mt-3">
-  Celebrating Creativity and Innovation at ScaleX
+           "Where Creativity Meets Scalable Innovation”
 </p>
 <p className="text-sm text-gray-800 lg:w-[30vw] mt-2">
   Join us in shaping the future of design and user experience. Stay updated on 
