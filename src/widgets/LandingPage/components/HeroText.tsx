@@ -43,7 +43,7 @@ export default function HeroText() {
         presents
       </div>
 
-      <div className="bg-gray-100 bg-opacity-15 p-2 rounded-full text-center shadow-lg animate-pulse z-10">
+      <div className="bg-gray-100 bg-opacity-15 py-2 px-3 rounded-full text-center shadow-lg animate-pulse z-10">
         <span className="flex items-center justify-center gap-2 md:text-lg lg:text-lg text-[3vw] font-normal">
           <BsLightningCharge className="text-yellow-400" />
           Empower Your Vision at ScaleX!

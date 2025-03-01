@@ -11,7 +11,7 @@ export default function FooterContent() {
   ];
 
   return (
-    <footer className="md:p-[2vw] lg:p-[2vw] p-[4vw] w-full bg-black-950">
+    <footer className="md:p-[2vw] lg:p-[2vw] p-[0] w-full bg-black-950">
       <div className="w-full md:p-10 lg:p-10 p-5 bg-yellow-400 rounded-md flex flex-col justify-start items-center gap-5">
         {/* Logo Section */}
         <div className="flex w-full md:flex-row lg:flex-row flex-col gap-10 md:gap-0 lg:gap-0 items-start justify-between">
