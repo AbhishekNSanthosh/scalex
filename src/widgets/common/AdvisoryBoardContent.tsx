@@ -33,7 +33,7 @@ export default function AdvisoryBoardContent() {
   return (
     <div className="px-[5vw] lg:py-[10vh] py-8">
       <TitleBar title="Advisory Board" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 py-[10vh]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:mt-8 py-5 lg:py-[10vh]">
         {judges?.map((item, index) => (
           <div
             key={index}
