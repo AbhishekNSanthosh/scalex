@@ -5,6 +5,7 @@ import HeroText from './components/HeroText'
 import Footer from '@widgets/Footer'
 import OverviewContent from '@widgets/common/OverviewContent'
 import TimelineWithSteps from '@widgets/common/TimelinewithSteps'
+import AdvisoryBoardContent from '@widgets/common/AdvisoryBoardContent'
 
 export default function LandingPageView() {
   return (
@@ -13,6 +14,7 @@ export default function LandingPageView() {
       <HeroText/>
       <OverviewContent/>
       <TimelineWithSteps/>
+      <AdvisoryBoardContent/>
       <Footer/>
     </main>
   )

@@ -1,4 +1,5 @@
 "use client"
+import { navItems } from "@utils/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
@@ -20,18 +21,9 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menu = [
-    { title: "Overview", link: "" },
-    { title: "Timeline", link: "" },
-    { title: "Advisory Board", link: "" },
-    { title: "Guidelines", link: "" },
-    { title: "Contact", link: "" },
-  ];
-
-  console.log(isScrolled)
   return (
     <div
-      className={`px-[3vw] h-[13vh] flex items-center justify-between fixed w-screen  z-[100] ${
+      className={`px-[5vw] h-[13vh] flex items-center justify-between fixed w-screen  z-[100] ${
         isScrolled ? "backdrop-blur-lg shadow-lg" : "bg-transparent"
       }`}
       style={{ backdropFilter: isScrolled ? "blur(10px)" : "none" }}
@@ -44,7 +36,7 @@ export default function Header() {
         className="w-[7rem]"
       />
       <div className="flex flex-row items-center gap-[4vw] justify-between">
-        {menu?.map((item, index) => (
+        {navItems?.map((item, index) => (
           <div key={index}>
             <Link className="capitalize font-medium text-white" href={item?.link}>
               {item?.title}

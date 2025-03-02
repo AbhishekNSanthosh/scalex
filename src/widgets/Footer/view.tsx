@@ -1,14 +1,9 @@
+import { navItems } from "@utils/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function FooterContent() {
-  const navItems = [
-    { title: "About", link: "" },
-    { title: "FAQs", link: "" },
-    { title: "Events", link: "" },
-    { title: "Contact", link: "" },
-  ];
 
   return (
     <footer className="md:p-[2vw] lg:p-[2vw] p-[0] w-full bg-black-950">
@@ -86,7 +81,7 @@ export default function FooterContent() {
             Made with 🖤 by Tech Team | Obcydians.
           </div>
           <div className="text-sm">
-            © {new Date().getFullYear()} Obcyfest 3.0. All rights reserved.
+            © {new Date().getFullYear()} scaleX. All rights reserved.
           </div>
         </div>
       </div>

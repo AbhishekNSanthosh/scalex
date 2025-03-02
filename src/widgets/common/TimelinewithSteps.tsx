@@ -58,7 +58,7 @@ const TimelineWithSteps: React.FC = () => {
     >
         <TitleBar title='Timeline'/>
       <motion.div
-        className="absolute left-[10px] lg:left-1/4 top-[130px] bottom-0 w-1 bg-yellow-400"
+        className="absolute left-[10px] lg:left-1/4 top-[130px] bottom-[50px] w-1 bg-yellow-400"
         style={{ scaleY, originY: 0 }}
       />
       {steps.map((step, index) => (
