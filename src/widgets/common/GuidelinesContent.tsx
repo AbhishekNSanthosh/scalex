@@ -10,7 +10,7 @@ export default function GuidelinesContent() {
   ];
 
   return (
-    <div className="px-[5vw] py-[10vh] bg-black text-white min-h-screen flex flex-col items-center">
+    <div className="px-[5vw] py-0 pb-16 lg:pb-0 lg:py-[10vh] bg-black text-white min-h-screen flex flex-col items-center">
       {/* Title Bar */}
       <TitleBar title="Guidelines" />
 

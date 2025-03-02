@@ -45,7 +45,7 @@ export default function Header() {
   return (
     <>
       <div
-        className={`px-[5vw] h-[13vh] flex items-center justify-between fixed w-screen  z-[100] ${
+        className={`px-[5vw] h-[10vh] lg:h-[13vh] flex items-center justify-between fixed w-screen  z-[100] ${
           isScrolled ? "backdrop-blur-lg shadow-lg" : "bg-transparent"
         }`}
         style={{ backdropFilter: isScrolled ? "blur(10px)" : "none" }}

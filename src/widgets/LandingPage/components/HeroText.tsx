@@ -7,7 +7,7 @@ import { FaFigma } from "react-icons/fa";
 
 export default function HeroText() {
   return (
-    <div className="relative px-[5vw] md:pt-[13vh] lg:pt-[15vh] pt-[3vh] flex flex-col items-center justify-center w-full min-h-[100vh] gap-3 bg-black text-gray-100 overflow-hidden z-10">
+    <div className="relative px-[5vw] md:pt-[13vh] lg:pt-[15vh] pt-[12vh] flex flex-col items-center justify-center w-full min-h-[100vh] gap-2 lg:gap-3 bg-black text-gray-100 overflow-hidden z-10">
       {/* Background Animated Icons */}
       <div className="absolute inset-0 z-0">
         <div className="moving-icon icon-1">
@@ -51,10 +51,10 @@ export default function HeroText() {
       </div>
 
       <h1
-        className="hero glitch1 layerstext-4xl font-bold tracking-tight md:text-8xl lg:text-8xl text-[7vw] z-10 mt-5 lg:mt-0 md:mt-0"
+        className="hero glitch1 layerstext-4xl leading-tight font-bold tracking-tight md:text-8xl lg:text-8xl text-[16vw] z-10 mt-0 lg:mt-0 md:mt-0"
         data-text="OBCYFEST 3.0"
       >
-        <span className="text-white">SCALE<span className="text-[10vw] text-yellow-400">X</span></span>
+        <span className="text-white">SCALE<span className="lg:text-[10vw] text-[23vw] text-yellow-400">X</span></span>
       </h1>
 
       {/* Date & Call to Action */}
@@ -63,7 +63,7 @@ export default function HeroText() {
         Unleashing Innovation on March 14, 2025 at Carmel College of Engineering and Technology!
           {/* <span className="text-yellow-400 font-bold">October 30, 2024</span> */}
         </p>
-        <p className="text-lg text-gray-300 mt-3">
+        <p className="lg:text-lg text-sm text-gray-300 mt-3">
         A full-day immersion into UI/UX, design thinking, and product innovation!
         </p>
       </div>

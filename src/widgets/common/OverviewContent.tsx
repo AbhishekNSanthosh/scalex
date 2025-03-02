@@ -28,7 +28,7 @@ export default function OverviewContent() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="flex px-[5vw] flex-col w-full gap-5 h-auto md:py-[15vh] lg:py-[15vh] py-[8vh]">
+    <div className="flex px-[5vw] flex-col w-full gap-5 h-auto md:py-[15vh] lg:py-[15vh] py-8 lg:mt-0">
      <TitleBar title="Overview"/>
       <div className="flex">
         <div className="flex-1 flex flex-col gap-8">

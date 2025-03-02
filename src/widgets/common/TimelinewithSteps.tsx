@@ -65,7 +65,7 @@ const TimelineWithSteps: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="w-screen flex flex-col justify-center relative overflow-hidden px-[5vw] gap-[50px] pb-[10vh]"
+      className="w-screen flex flex-col justify-center relative overflow-hidden px-[5vw] gap-[50px] lg:pb-[10vh] mt-8 lg:mt-0"
     >
         <TitleBar title='Timeline'/>
       <motion.div
@@ -103,7 +103,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ step, index, progress }) =>
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
-          className="text-4xl font-bold text-gray-600"
+          className="lg:text-4xl text-2xl font-bold text-gray-600"
         >
 {step?.time}
         </motion.h2>
@@ -115,7 +115,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ step, index, progress }) =>
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
-            className="text-2xl font-semibold"
+            className="lg:text-2xl text-lg font-semibold"
           >
             {step.title}
           </motion.h3>
@@ -124,7 +124,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ step, index, progress }) =>
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }}
-            className="mt-1 text-lg text-gray-600"
+            className="mt-1 text-sm lg:text-lg text-gray-600"
           >
             {step.description}
           </motion.p>
