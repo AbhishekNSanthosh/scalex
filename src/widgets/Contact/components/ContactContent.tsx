@@ -6,7 +6,7 @@ import { TbMail } from "react-icons/tb";
 
 export default function ContactContent() {
   return (
-    <div className="pt-[100px] px-[5vw] flex flex-col lg:gap-10 gap-4 pb-[10vh]">
+    <div className="lg:pt-[100px] pt-[80px] px-[5vw] flex flex-col lg:gap-10 gap-4 pb-[10vh]">
       <TitleBar title="Getting There" />
       <div className="flex flex-col lg:flex-row gap-10">
         <div className="flex-1 flex-col flex gap-6">

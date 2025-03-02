@@ -86,7 +86,7 @@ export default function HeroText() {
 
       {/* Call to Action Button */}
         <button className="md:mt-10 lg:mt-10 mt-2 px-8 py-3 bg-yellow-400 rounded-lg cursor-pointer font-semibold text-black-950 hover:bg-yellow-500 transition-colors z-10">
-      <Link href={"/events"}>
+      <Link href={"/"}>
           Register Now
       </Link>
         </button>

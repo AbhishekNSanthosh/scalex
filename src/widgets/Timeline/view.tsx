@@ -7,7 +7,7 @@ export default function TimeLine() {
   return (
     <main>
       <Header />
-      <div className="pt-[100px]">
+      <div className="pt-[50px] lg:pt-[100px]">
       <TimelineWithSteps />
       </div>
       <Footer />

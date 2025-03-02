@@ -33,16 +33,16 @@ export default function FooterContent() {
             <h3 className="text-xl font-semibold text-gray-800 mb-3">
               Quick Links
             </h3>
-            <ul className="md:space-y-2 lg:space-y-2 space-y-0 text-sm text-gray-800">
+            <ul className="md:space-y-2 lg:space-y-2 space-y-2 text-sm text-gray-800">
               {navItems.map((item, index) => (
                 <li key={index}>
                   {"->"}{" "}
-                  <a
+                  <Link
                     href={`${item.link}`}
                     className="hover:text-black transition-colors"
                   >
                     {item.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

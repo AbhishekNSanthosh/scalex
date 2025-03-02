@@ -7,7 +7,7 @@ export default function Guidelines() {
   return (
     <main>
       <Header />
-      <div className="pt-[30px]">
+      <div className="pt-[80px] lg:pt-[30px]">
       <GuidelinesContent />
       </div>
       <Footer />

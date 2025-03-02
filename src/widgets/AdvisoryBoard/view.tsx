@@ -7,7 +7,7 @@ export default function AdvisoryBoard() {
   return (
     <main>
       <Header/>
-      <div className="pt-[30px]">
+      <div className="pt-[50px] lg:pt-[30px]">
       <AdvisoryBoardContent/>
       </div>
       <Footer/>
