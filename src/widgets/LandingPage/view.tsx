@@ -6,6 +6,7 @@ import Footer from '@widgets/Footer'
 import OverviewContent from '@widgets/common/OverviewContent'
 import TimelineWithSteps from '@widgets/common/TimelinewithSteps'
 import AdvisoryBoardContent from '@widgets/common/AdvisoryBoardContent'
+import GuidelinesContent from '@widgets/common/GuidelinesContent'
 
 export default function LandingPageView() {
   return (
@@ -15,6 +16,7 @@ export default function LandingPageView() {
       <OverviewContent/>
       <TimelineWithSteps/>
       <AdvisoryBoardContent/>
+      <GuidelinesContent/>
       <Footer/>
     </main>
   )

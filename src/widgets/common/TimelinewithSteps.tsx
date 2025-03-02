@@ -17,26 +17,37 @@ interface Step {
 
 const steps: Step[] = [
   {
-    title: 'Hackathon Registration',
-    time:"8:30 AM",
-    description: 'Hackathon Registration starts. Get ready for an exciting day!'
+    title: "Check-in",
+    time: "8:30 AM",
+    description: "Hackathon registration starts. Get ready for an exciting day!"
   },
   {
-    title: 'Inauguration',
-    time:"8:30 AM",
-    description: 'Official inauguration of the event with keynote speakers.'
+    title: "Hackathon Starts",
+    time: "9:00 AM",
+    description: "The official inauguration of the event, followed by the hackathon (9:00 AM - 3:00 PM)."
   },
   {
-    title: 'Lunch Break',
-    time:"8:30 AM",
-    description: 'Enjoy a delicious lunch and network with fellow participants.'
+    title: "Lunch Break",
+    time: "12:30 PM",
+    description: "Enjoy a delicious lunch and network with fellow participants (12:30 PM - 1:30 PM)."
   },
   {
-    title: 'Cultural Events',
-    time:"8:30 AM",
-    description: '3:00 PM - Relax and enjoy cultural performances and entertainment.'
+    title: "Q&A Session",
+    time: "3:00 PM",
+    description: "An interactive session where participants can ask questions and discuss key takeaways (3:00 PM - 4:00 PM)."
+  },
+  {
+    title: "Cultural Events",
+    time: "4:00 PM",
+    description: "Relax and enjoy cultural performances and entertainment (4:00 PM - 5:00 PM)."
+  },
+  {
+    title: "Valedictory Ceremony",
+    time: "5:00 PM",
+    description: "The closing ceremony with prize distribution and concluding speeches (5:00 PM - 5:30 PM)."
   }
 ];
+
 
 const TimelineWithSteps: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
