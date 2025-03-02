@@ -76,7 +76,7 @@ export default function FooterContent() {
 
         {/* Bottom Footer Text */}
         <div className="h-[0.5px] w-[100%] bg-black-950 mt-5"></div>
-        <div className="flex justify-between items-center md:flex-row lg:flex-row flex-col mt-4 text-black-950 text-sm w-full gap-2">
+        <div className="flex justify-between items-center md:flex-row lg:flex-row flex-col-reverse mt-4 text-black-950 text-sm w-full gap-2">
           <div className="">
             Made with 🖤 by Tech Team | Obcydians.
           </div>
