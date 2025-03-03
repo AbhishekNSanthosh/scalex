@@ -60,10 +60,10 @@ export default function FooterContent() {
               <br />
             </p>
             <Link
-              href="mailto:obcyfest@carmelcet.in"
+              href="mailto:scalex@carmelcet.in"
               className="hover:text-black-950 text-gray-800 transition-colors mt-4"
             >
-              obcyfest@carmelcet.in
+              scalex@carmelcet.in
             </Link>
             <Link
               href="https://wa.me/+917907247909" target="_blank"

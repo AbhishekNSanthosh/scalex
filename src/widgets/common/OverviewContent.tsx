@@ -21,7 +21,7 @@ export default function OverviewContent() {
       title: "About scaleX",
       img: "/logo.svg",
       content:
-        "By spreading ideas worthy enough to be shared, the power of inspiration and change is created. A global community striving towards spreading ideas from every discipline and culture, that is TED in a nutshell. It is a non-profit organisation that helps people get the deeper meaning of ideas, attitudes and the world itself. From its origin in 1984, TED talks have touched people’s hearts. It continues to be watched all around the world. The impact a TED event creates is unmatched. TED conferences and events inspire and motivate people towards becoming a better version of themselves.",
+        "ScaleX is a UI/UX product design hackathon that brings together creative minds to innovate, collaborate, and redefine user experience and interface design. It provides a platform for designers, developers, and problem-solvers to create intuitive, user-centric, and impactful digital solutions. ScaleX challenges innovators to redefine usability, beauty, and functionality while nurturing creativity and practical problem-solving. By uniting skilled people from various backgrounds, ScaleX fosters product design innovation, challenging participants to create solutions that improve digital interactions and make everyday user experiences better. It is a place where ideas become reality.",
     },
   ];
 
