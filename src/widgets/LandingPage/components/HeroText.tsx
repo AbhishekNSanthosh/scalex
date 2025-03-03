@@ -54,17 +54,22 @@ export default function HeroText() {
         className="hero glitch1 layerstext-4xl leading-tight font-bold tracking-tight md:text-8xl lg:text-8xl text-[16vw] z-10 mt-0 lg:mt-0 md:mt-0"
         data-text="OBCYFEST 3.0"
       >
-        <span className="text-white">SCALE<span className="lg:text-[10vw] text-[23vw] text-yellow-400">X</span></span>
+        <span className="text-white">
+          SCALE
+          <span className="lg:text-[10vw] text-[23vw] text-yellow-400">X</span>
+        </span>
       </h1>
 
       {/* Date & Call to Action */}
       <div className="text-center mt-2 mb-7 md:text-xl lg:text-xl text-sm z-10">
         <p>
-        Unleashing Innovation on March 14, 2025 at Carmel College of Engineering and Technology!
+          Unleashing Innovation on March 14, 2025 at Carmel College of
+          Engineering and Technology!
           {/* <span className="text-yellow-400 font-bold">October 30, 2024</span> */}
         </p>
         <p className="lg:text-lg text-sm text-gray-300 mt-3">
-        A full-day immersion into UI/UX, design thinking, and product innovation!
+          A full-day immersion into UI/UX, design thinking, and product
+          innovation!
         </p>
       </div>
 
@@ -85,11 +90,11 @@ export default function HeroText() {
       </div>
 
       {/* Call to Action Button */}
+      <Link href={"https://forms.gle/v7Xq2Fj7qKPDda8dA"} target="_blank">
         <button className="md:mt-10 lg:mt-10 mt-2 px-8 py-3 bg-yellow-400 rounded-lg cursor-pointer font-semibold text-black-950 hover:bg-yellow-500 transition-colors z-10">
-      <Link href={"/"}>
           Register Now
-      </Link>
         </button>
+      </Link>
     </div>
   );
 }

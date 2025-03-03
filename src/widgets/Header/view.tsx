@@ -77,69 +77,68 @@ export default function Header() {
           ))}
         </div>
         <div className="hidden lg:flex">
-          <button className="px-3 py-2 text-yellow-400 font-medium rounded-[8px] flex items-center justify-center gap-3">
-            Register
-            <FaArrowRightLong />
-          </button>
+          <Link href={"https://forms.gle/v7Xq2Fj7qKPDda8dA"} target="_blank">
+            <button className="px-3 py-2 text-yellow-400 font-medium rounded-[8px] flex items-center justify-center gap-3">
+              Register
+              <FaArrowRightLong />
+            </button>
+          </Link>
         </div>
       </div>
       <div
-          className={`fixed inset-0 z-[110] transform transition-transform duration-500 ease-in-out ${
-            isDrawerOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed inset-0 z-[110] transform transition-transform duration-500 ease-in-out ${
+          isDrawerOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Overlay */}
+        <div
+          className={`absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-500 ${
+            isDrawerOpen ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
-        >
-          {/* Overlay */}
-          <div
-            className={`absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-500 ${
-              isDrawerOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-            onClick={() => setIsDrawerOpen(false)}
-          />
+          onClick={() => setIsDrawerOpen(false)}
+        />
 
-          {/* Drawer Content */}
-          <div className="absolute right-0 top-0 h-full w-[80%] sm:w-[60%] bg-black-950 shadow-lg p-6">
-            <div className="flex justify-between items-center mb-6">
-              <span className="text-lg font-bold text-yellow-400">Menu</span>
-              <button
-                onClick={() => setIsDrawerOpen(false)}
-                className="text-gray-600 hover:text-gray-800"
-              >
-                <IoClose className="text-2xl" />
+        {/* Drawer Content */}
+        <div className="absolute right-0 top-0 h-full w-[80%] sm:w-[60%] bg-black-950 shadow-lg p-6">
+          <div className="flex justify-between items-center mb-6">
+            <span className="text-lg font-bold text-yellow-400">Menu</span>
+            <button
+              onClick={() => setIsDrawerOpen(false)}
+              className="text-gray-600 hover:text-gray-800"
+            >
+              <IoClose className="text-2xl" />
+            </button>
+          </div>
+          <nav className="flex flex-col gap-1">
+            {navItems?.map((item, index) => (
+              <div key={index} className="flex flex-col">
+                <Link
+                  href={item?.link}
+                  className="capitalize flex items-center gap-2 w-full justify-between border-b border-black-900 py-3"
+                >
+                  {item?.title}
+                  <IoIosArrowForward />
+                </Link>
+              </div>
+            ))}
+          </nav>
+          <div className="mt-8">
+            <Link href={"https://forms.gle/v7Xq2Fj7qKPDda8dA"} target="_blank">
+              <button className="w-full px-4 py-2 rounded-md bg-yellow-400 text-black-950 font-medium hover:bg-primary-700 transition-colors">
+                Register
               </button>
+            </Link>
+          </div>
+          <div className="py-2 flex flex-col lg:flex-row w-full items-center justify-center absolute bottom-3 self-center">
+            <div className="flex-1 flex items-center justify-between font-semibold text-sm text-gray-700">
+              <span className="">2025 © scaleX</span>
             </div>
-            <nav className="flex flex-col gap-1">
-              {navItems?.map((item, index) => (
-                <div key={index} className="flex flex-col">
-                  <Link
-                    href={item?.link}
-                    className="capitalize flex items-center gap-2 w-full justify-between border-b border-black-900 py-3"
-                  >
-                    {item?.title}
-                    <IoIosArrowForward/>
-                  </Link>
-                </div>
-              ))}
-            </nav>
-            <div className="mt-8">
-              <Link
-                href={"https://forms.gle/VWgA4t2jr1esEkLcA"}
-                target="_blank"
-              >
-                <button className="w-full px-4 py-2 rounded-md bg-yellow-400 text-black-950 font-medium hover:bg-primary-700 transition-colors">
-                  Register
-                </button>
-              </Link>
-            </div>
-            <div className="py-2 flex flex-col lg:flex-row w-full items-center justify-center absolute bottom-3 self-center">
-              <div className="flex-1 flex items-center justify-between font-semibold text-sm text-gray-700">
-                <span className="">2025 © scaleX</span>
-              </div>
-              <div className="flex-1 flex items-center lg:justify-end text-sm font-semibold text-gray-700">
-                All rights reserved
-              </div>
+            <div className="flex-1 flex items-center lg:justify-end text-sm font-semibold text-gray-700">
+              All rights reserved
             </div>
           </div>
         </div>
+      </div>
     </>
   );
 }
