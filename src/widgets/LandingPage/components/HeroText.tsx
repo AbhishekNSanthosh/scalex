@@ -90,11 +90,12 @@ export default function HeroText() {
       </div>
 
       {/* Call to Action Button */}
+
       <Link href={"https://forms.gle/v7Xq2Fj7qKPDda8dA"} target="_blank">
-        <button className="md:mt-10 lg:mt-10 mt-2 px-8 py-3 bg-yellow-400 rounded-lg cursor-pointer font-semibold text-black-950 hover:bg-yellow-500 transition-colors z-10">
-          Register Now
-        </button>
-      </Link>
+              <button className="md:mt-10 lg:mt-10 mt-2 px-8 py-3 bg-yellow-400 rounded-lg font-semibold text-black-950 hover:bg-yellow-500 transition-colors z-10">
+                Register
+              </button>
+            </Link>
     </div>
   );
 }
