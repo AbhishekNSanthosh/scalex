@@ -46,7 +46,7 @@ export default function ContactContent() {
               </div>
               <div className=" flex flex-col">
                 <span className="font-semibold text-xl">Email</span>
-                <span className="">obcyfest@carmelcet.in</span>
+                <span className="">scalex@carmelcet.in</span>
               </div>
             </div>
           </div>
