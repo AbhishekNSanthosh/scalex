@@ -18,12 +18,6 @@ export default function OverviewContent() {
         "The Department of Computer Science & Engineering at CCET is a hub of technological innovation and learning. With a curriculum designed to keep pace with industry advancements, the department empowers students with cutting-edge knowledge in software development, artificial intelligence, cybersecurity, and more. Through workshops, hackathons, and industry interactions, students gain hands-on experience and exposure to real-world challenges.",
     },
     {
-      title: "About ScaleX",
-      img: "/scalex.png",
-      content:
-        "ScaleX is a premier national-level Product Design UI/UX hackathon aimed at bringing together creative minds to solve real-world design challenges. It provides a platform for designers to showcase their skills, collaborate with peers, and receive mentorship from industry experts. With an exciting prize pool and networking opportunities, ScaleX is the perfect opportunity to push boundaries and redefine the future of design.",
-    },
-    {
       title: "About scaleX",
       img: "/logo.svg",
       content:
