@@ -9,13 +9,19 @@ export default function OverviewContent() {
       title: "About CCET",
       img: "/carmel.png",
       content:
-        "By spreading ideas worthy enough to be shared, the power of inspiration and change is created. A global community striving towards spreading ideas from every discipline and culture, that is TED in a nutshell. It is a non-profit organisation that helps people get the deeper meaning of ideas, attitudes and the world itself. From its origin in 1984, TED talks have touched people’s hearts. It continues to be watched all around the world. The impact a TED event creates is unmatched. TED conferences and events inspire and motivate people towards becoming a better version of themselves.",
+        "Carmel College of Engineering & Technology (CCET) is committed to fostering innovation, knowledge, and creativity. With a strong emphasis on research and practical learning, CCET provides students with the skills and resources to excel in their respective fields. The institution is dedicated to nurturing future leaders through academic excellence, industry collaborations, and hands-on experience.",
     },
     {
       title: "About Department of CSE",
       img: "/dep.webp",
       content:
-        "By spreading ideas worthy enough to be shared, the power of inspiration and change is created. A global community striving towards spreading ideas from every discipline and culture, that is TED in a nutshell. It is a non-profit organisation that helps people get the deeper meaning of ideas, attitudes and the world itself. From its origin in 1984, TED talks have touched people’s hearts. It continues to be watched all around the world. The impact a TED event creates is unmatched. TED conferences and events inspire and motivate people towards becoming a better version of themselves.",
+        "The Department of Computer Science & Engineering at CCET is a hub of technological innovation and learning. With a curriculum designed to keep pace with industry advancements, the department empowers students with cutting-edge knowledge in software development, artificial intelligence, cybersecurity, and more. Through workshops, hackathons, and industry interactions, students gain hands-on experience and exposure to real-world challenges.",
+    },
+    {
+      title: "About ScaleX",
+      img: "/scalex.png",
+      content:
+        "ScaleX is a premier national-level Product Design UI/UX hackathon aimed at bringing together creative minds to solve real-world design challenges. It provides a platform for designers to showcase their skills, collaborate with peers, and receive mentorship from industry experts. With an exciting prize pool and networking opportunities, ScaleX is the perfect opportunity to push boundaries and redefine the future of design.",
     },
     {
       title: "About scaleX",
@@ -29,7 +35,7 @@ export default function OverviewContent() {
 
   return (
     <div className="flex px-[5vw] flex-col w-full gap-5 h-auto md:py-[15vh] lg:py-[15vh] py-8 lg:mt-0">
-     <TitleBar title="Overview"/>
+      <TitleBar title="Overview" />
       <div className="flex">
         <div className="flex-1 flex flex-col gap-8">
           <div className="flex flex-col gap-1">
