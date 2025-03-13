@@ -20,6 +20,7 @@ interface Participant {
   email: string;
   teamName: string;
   checkedin: boolean;
+  serialNo: string;
 }
 
 export default function Content() {
@@ -122,6 +123,32 @@ export default function Content() {
             </span>
             , where innovation meets scalability.
           </p>
+
+          {/* Determine the track based on the last 3 digits of serialNo */}
+          {participant?.serialNo && (
+            <p className="mt-2 text-lg font-medium">
+              Your assigned track:{" "}
+              <span className="text-yellow-400">
+                {(() => {
+                  const lastThreeDigits = participant.serialNo.slice(-3);
+                  if (lastThreeDigits.startsWith("1")) {
+                    return "Track 1 - Common Computer Facility, CCET";
+                  } else if (lastThreeDigits.startsWith("2")) {
+                    return "Track 2 - Project Lab";
+                  } else if (lastThreeDigits.startsWith("3")) {
+                    return "Track 3 - CSE Department Lab 1";
+                  } else if (lastThreeDigits.startsWith("4")) {
+                    return "Track 4 - CSE Department Lab 2";
+                  } else if (lastThreeDigits.startsWith("5")) {
+                    return "Track 5 - CSE Tutorial Room";
+                  } else {
+                    return "No track assigned";
+                  }
+                })()}
+              </span>
+            </p>
+          )}
+
           <p className="mt-2 text-base text-gray-400">
             Wishing you an inspiring journey ahead—collaborate, innovate, and
             make an impact!
@@ -191,14 +218,22 @@ export default function Content() {
                   <span className="font-semibold text-gray-300">Member 1:</span>{" "}
                   {participant?.member1}
                 </p>
-                <p>
-                  <span className="font-semibold text-gray-300">Member 2:</span>{" "}
-                  {participant?.member2}
-                </p>
-                <p>
-                  <span className="font-semibold text-gray-300">Member 3:</span>{" "}
-                  {participant?.member3}
-                </p>
+                {participant?.member2 && (
+                  <p>
+                    <span className="font-semibold text-gray-300">
+                      Member 2:
+                    </span>{" "}
+                    {participant?.member2}
+                  </p>
+                )}
+                {participant?.member3 && (
+                  <p>
+                    <span className="font-semibold text-gray-300">
+                      Member 3:
+                    </span>{" "}
+                    {participant?.member3}
+                  </p>
+                )}
                 <p className="flex items-center">
                   <span className="font-semibold text-gray-300">Status:</span>
                   <span
