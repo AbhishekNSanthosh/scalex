@@ -160,7 +160,7 @@ export default function Content() {
       )}
 
       {!showMsg && (
-        <div className="flex flex-col items-center justify-center gap-5 w-full max-w-[90vw] sm:w-[80vw] lg:w-auto px-4">
+        <div className="flex flex-col items-center justify-center gap-5 w-full max-w-[90vw] sm:w-[80vw] lg:w-auto">
         <h2 className="text-lg sm:text-xl font-semibold text-center">Check-in Form</h2>
       
         <form onSubmit={handleSubmit} className="space-y-3 w-full">
