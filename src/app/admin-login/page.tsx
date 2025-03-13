@@ -15,7 +15,7 @@ export default function AdminLogin() {
     if (typeof window !== "undefined") {
       const isLoggedIn = Cookies.get("admin_logged_in"); // Use cookies instead
       if (isLoggedIn) {
-        router.push("/dashboard");
+        router.push("/dashboard/home");
       }
     }
   }, [router]);
