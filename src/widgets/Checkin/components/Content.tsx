@@ -100,7 +100,7 @@ export default function Content() {
   };
 
   return (
-    <div className="p-6 max-w-md mx-auto rounded-xl shadow-md space-y-4 min-h-screen flex flex-col items-center justify-center">
+    <div className="p-6 max-w-md mx-auto rounded-xl shadow-md space-y-4 min-h-screen flex flex-col items-center justify-center overflow-hidden">
       <Link href="/">
         <Image
           src="/logo.svg"
