@@ -25,11 +25,11 @@ export default function AdminSidebar() {
       link: "/dashboard/upload",
       icon: <MdOutlineFileUpload className="text-[22px]" />,
     },
-    {
-      title: "Settings",
-      link: "/dashboard/settings",
-      icon: <IoMdSettings className="text-[22px]" />,
-    },
+    // {
+    //   title: "Settings",
+    //   link: "/dashboard/settings",
+    //   icon: <IoMdSettings className="text-[22px]" />,
+    // },
   ];
 
   const handleLogout = () => {

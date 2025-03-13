@@ -257,7 +257,7 @@ export default function Content() {
           </div>
         </div>
       )}
-      <div className="absolute bottom-4">Made with 💛 by Scalex</div>
+      <div className="absolute bottom-4">Made with 💛 by ScaleX Team</div>
     </div>
   );
 }
