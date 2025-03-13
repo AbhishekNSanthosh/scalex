@@ -160,105 +160,100 @@ export default function Content() {
       )}
 
       {!showMsg && (
-        <div className="flex flex-col items-center justify-center gap-5">
-          <h2 className="text-xl font-semibold">Check-in Form</h2>
-
-          <form onSubmit={handleSubmit} className="space-y-3 w-full">
-            <div className="w-full flex flex-col">
-              <div className="w-full flex items-center border border-yellow-400 rounded bg-black-950 outline outline-2 outline-yellow-400">
-                <span className="pl-3 py-2 bg-black-950 text-white rounded-l">
-                  {SERIAL_PREFIX}
-                </span>
-                <input
-                  type="text"
-                  name="serialNumber"
-                  placeholder="Enter last digits (e.g., 101)"
-                  value={formData.serialNumber}
-                  onChange={handleChange}
-                  className="flex-1 p-2 bg-black-950 text-white rounded-r outline-none"
-                  required
-                  disabled={fetching}
-                />
-              </div>
-              <p className="text-sm text-gray-400 mt-2">
-                Serial number is provided in the Google Sheet shared.{" "}
-                <a
-                  href="https://docs.google.com/spreadsheets/d/1wzaOU25fX7dC3pSBLXbvk-DIZny5pTUa45DNSgVRDFA/edit?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-yellow-400 underline"
+        <div className="flex flex-col items-center justify-center gap-5 w-full max-w-[90vw] sm:w-[80vw] lg:w-auto px-4">
+        <h2 className="text-lg sm:text-xl font-semibold text-center">Check-in Form</h2>
+      
+        <form onSubmit={handleSubmit} className="space-y-3 w-full">
+          <div className="w-full flex flex-col">
+            <div className="w-full flex items-center border border-yellow-400 rounded bg-black-950 outline outline-2 outline-yellow-400">
+              <span className="pl-3 py-2 bg-black-950 text-white rounded-l text-sm sm:text-base">
+                {SERIAL_PREFIX}
+              </span>
+              <input
+                type="text"
+                name="serialNumber"
+                placeholder="Enter last digits (e.g 101)"
+                value={formData.serialNumber}
+                onChange={handleChange}
+                className="flex-1 py-3 p-1 sm:p-2 bg-black-950 text-white rounded-r outline-none text-sm sm:text-base"
+                required
+                disabled={fetching}
+              />
+            </div>
+            <p className="text-xs sm:text-sm text-gray-400 mt-2 text-center">
+              Serial number is provided in the Google Sheet shared.{" "}
+              <a
+                href="https://docs.google.com/spreadsheets/d/1wzaOU25fX7dC3pSBLXbvk-DIZny5pTUa45DNSgVRDFA/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-400 underline"
+              >
+                Click here
+              </a>
+              .
+            </p>
+          </div>
+      
+          <button
+            type="submit"
+            className="w-full bg-yellow-400 text-black-950 font-semibold py-3 sm:py-2 rounded-lg hover:bg-yellow-500 transition-all"
+            disabled={fetching}
+          >
+            {fetching ? "Fetching..." : "Get Details"}
+          </button>
+        </form>
+      
+        {participant && (
+          <div className="w-full bg-black-950 p-4 sm:p-6 rounded-xl mt-4 text-white border border-yellow-400 shadow-lg">
+            <div className="space-y-2 text-sm sm:text-base">
+              <p>
+                <span className="font-semibold text-gray-300">Team:</span>{" "}
+                {participant.teamName}
+              </p>
+              <p>
+                <span className="font-semibold text-gray-300">College:</span>{" "}
+                {participant.collegeName}
+              </p>
+              <p>
+                <span className="font-semibold text-gray-300">Member 1:</span>{" "}
+                {participant?.member1}
+              </p>
+              {participant?.member2 && (
+                <p>
+                  <span className="font-semibold text-gray-300">Member 2:</span>{" "}
+                  {participant?.member2}
+                </p>
+              )}
+              {participant?.member3 && (
+                <p>
+                  <span className="font-semibold text-gray-300">Member 3:</span>{" "}
+                  {participant?.member3}
+                </p>
+              )}
+              <p className="flex items-center">
+                <span className="font-semibold text-gray-300">Status:</span>
+                <span
+                  className={`ml-2 font-medium ${
+                    participant.checkedin ? "text-green-400" : "text-red-500"
+                  }`}
                 >
-                  Click here
-                </a>
-                .
+                  {participant.checkedin ? "✅ Checked-in" : "❌ Not Checked-in"}
+                </span>
               </p>
             </div>
-
-            <button
-              type="submit"
-              className="w-full bg-yellow-400 text-black-950 font-semibold py-2 rounded hover:bg-yellow-500"
-              disabled={fetching}
-            >
-              {fetching ? "Fetching..." : "Get Details"}
-            </button>
-          </form>
-
-          {participant && (
-            <div className="w-full bg-black-950 p-6 rounded-xl mt-4 text-white border border-yellow-400 shadow-lg">
-              <div className="space-y-2 text-sm">
-                <p>
-                  <span className="font-semibold text-gray-300">Team:</span>{" "}
-                  {participant.teamName}
-                </p>
-                <p>
-                  <span className="font-semibold text-gray-300">College:</span>{" "}
-                  {participant.collegeName}
-                </p>
-                <p>
-                  <span className="font-semibold text-gray-300">Member 1:</span>{" "}
-                  {participant?.member1}
-                </p>
-                {participant?.member2 && (
-                  <p>
-                    <span className="font-semibold text-gray-300">
-                      Member 2:
-                    </span>{" "}
-                    {participant?.member2}
-                  </p>
-                )}
-                {participant?.member3 && (
-                  <p>
-                    <span className="font-semibold text-gray-300">
-                      Member 3:
-                    </span>{" "}
-                    {participant?.member3}
-                  </p>
-                )}
-                <p className="flex items-center">
-                  <span className="font-semibold text-gray-300">Status:</span>
-                  <span
-                    className={`ml-2 font-medium ${
-                      participant.checkedin ? "text-green-400" : "text-red-500"
-                    }`}
-                  >
-                    {participant.checkedin
-                      ? "✅ Checked-in"
-                      : "❌ Not Checked-in"}
-                  </span>
-                </p>
-              </div>
-
-              {!participant.checkedin && (
-                <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="w-full bg-yellow-400 text-black-950 font-semibold py-2 rounded-lg mt-4 transition duration-300 hover:bg-green-500"
-                >
-                  Check-in
-                </button>
-              )}
-            </div>
-          )}
-        </div>
+      
+            {!participant.checkedin && (
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="w-full bg-yellow-400 text-black-950 font-semibold py-3 sm:py-2 rounded-lg mt-4 transition duration-300 hover:bg-green-500"
+              >
+                Check-in
+              </button>
+            )}
+          </div>
+        )}
+      </div>
+      
       )}
 
       {isModalOpen && (
