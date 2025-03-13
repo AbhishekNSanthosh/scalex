@@ -4,13 +4,15 @@ import React, { useState } from "react";
 import { FaHome } from "react-icons/fa";
 import Link from "next/link";
 import { IoMdSettings } from "react-icons/io";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { MdOutlineFileUpload } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { CiLogout } from "react-icons/ci";
+import Cookies from "js-cookie";
 
 export default function AdminSidebar() {
   const location = usePathname();
+  const router = useRouter();
 
   const menuItems = [
     {
@@ -29,6 +31,13 @@ export default function AdminSidebar() {
       icon: <IoMdSettings className="text-[22px]" />,
     },
   ];
+
+  const handleLogout = () => {
+    Cookies.remove("admin_logged_in"); // Remove the authentication cookie
+    setTimeout(() => {
+      router.push("/"); // Redirect to login page
+    }, 300);
+  };
 
   return (
     <div className="w-[15vw] fixed left-0 h-full flex-col flex py-2">
@@ -59,9 +68,15 @@ export default function AdminSidebar() {
         ))}
       </div>
       <div className="flex flex-col absolute bottom-4 px-4 w-full items-center justify-center gap-1 text-xs text-gray-700">
-        <button className="bg-[#ff0000] bg-opacity-50 w-full py-3 rounded-lg text-white text-sm flex items-center justify-center gap-2">
-          <CiLogout className="text-xl"/>
-          Logout</button>
+        <button
+          onClick={() => {
+            handleLogout();
+          }}
+          className="bg-[#ff0000] bg-opacity-50 w-full py-3 rounded-lg text-white text-sm flex items-center justify-center gap-2"
+        >
+          <CiLogout className="text-xl" />
+          Logout
+        </button>
       </div>
     </div>
   );
