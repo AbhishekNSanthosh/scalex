@@ -68,7 +68,7 @@ export default function DashboardPage() {
                 <tr
                   key={participant.id}
                   className={`${
-                    participant.checkedin ? "bg-yellow-500 text-black" : "bg-black-950 text-gray-500"
+                    participant.checkedin ? "bg-yellow-500 text-black-950" : "bg-black-950 text-gray-500"
                   } hover:bg-gray-700`}
                 >
                   <td className="px-4 py-2 border border-black-900">
