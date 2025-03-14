@@ -100,7 +100,7 @@ export default function Content() {
   };
 
   return (
-    <div className="p-6 max-w-md mx-auto rounded-xl shadow-md space-y-4 min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <div className="p-6 max-w-md mx-auto relative rounded-xl shadow-md space-y-4 min-h-screen flex flex-col items-center justify-center overflow-hidden">
       <Link href="/">
         <Image
           src="/logo.svg"
@@ -262,7 +262,7 @@ export default function Content() {
           role="dialog"
           aria-labelledby="check-in-confirmation"
         >
-          <div className="bg-black-950 gap-2 p-6 rounded-lg shadow-lg text-center border border-yellow-400 flex flex-col items-center">
+          <div className="bg-black-950 gap-2  w-[90vw] lg:w-auto p-6 rounded-lg shadow-lg text-center border border-yellow-400 flex flex-col items-center">
             <FaCircleExclamation className="text-red-400 text-[40px]" />
             <p id="check-in-confirmation" className="text-lg font-semibold">
               Are you sure you want to confirm check-in?
@@ -287,7 +287,7 @@ export default function Content() {
           </div>
         </div>
       )}
-      <div className="absolute bottom-4">Made with 💛 by ScaleX Team</div>
+      <div className="absolute bottom-4">Made with 💛 by <span className="text-yellow-400 font-semibold">ScaleX</span> Team</div>
     </div>
   );
 }
